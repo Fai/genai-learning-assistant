@@ -1,0 +1,9 @@
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+scrape_configs:
+  - job_name: 'genai-assistant'
+    static_configs:
+      - targets: ['genai-assistant:9090']
+    metrics_path: '/api/v1/metrics'
